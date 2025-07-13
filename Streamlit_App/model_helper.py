@@ -1,5 +1,6 @@
 # model_helper.py
 import torch
+import os
 from torch import nn
 from torchvision import models, transforms
 from PIL import Image
@@ -71,7 +72,8 @@ def predict(image_path):
     device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
     if trained_model is None:
         trained_model = CarClassifierResNet()
-        trained_model.load_state_dict(torch.load("model/saved_model.pth", map_location=device))
+        model_path = os.path.join(os.path.dirname(__file__), "model", "saved_model.pth")
+        trained_model.load_state_dict(torch.load(model_path, map_location=device))
         trained_model.to(device)
         trained_model.eval()
 
