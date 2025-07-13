@@ -87,7 +87,7 @@ The model's performance across 8 damage categories is visualized below:
 ├── Code/                        # Model training and experimentation notebooks
 │   ├── damage_prediction.ipynb  # Contains model training pipeline
 │   ├── hyperparameter_tunning.ipynb  # Optuna-based tuning workflow
-│   └── saved_model.pth          # Intermediate trained model
+│   └── saved_model.pth          # Final trained ResNet50 model (Optuna tuned)
 ```
 
 ---
