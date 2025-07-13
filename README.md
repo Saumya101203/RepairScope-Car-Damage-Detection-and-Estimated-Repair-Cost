@@ -88,8 +88,6 @@ The model's performance across 8 damage categories is visualized below:
 │   ├── damage_prediction.ipynb  # Contains model training pipeline
 │   ├── hyperparameter_tunning.ipynb  # Optuna-based tuning workflow
 │   └── saved_model.pth          # Intermediate trained model
-diff
-Copy
 ```
 
 ---
